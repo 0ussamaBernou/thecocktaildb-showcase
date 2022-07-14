@@ -57,7 +57,7 @@ div {
   cursor: pointer;
   position: relative;
   transition: flex var(--trans-delay) ease-in-out;
-  
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
 }
 .hero {
   display: flex;
