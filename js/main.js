@@ -4,9 +4,9 @@ const input = document.querySelector("[data-input]");
 
 function fetchDrink() {
   hero.innerHTML = "";
-  fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${input.value}`
-  )
+  let query = input.value.toLowerCase();
+
+  fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`)
     .then((res) => res.json())
     .then((data) => {
       console.log(data.drinks);
@@ -28,10 +28,15 @@ function fetchDrink() {
       const drinkDivs = document.querySelectorAll("[data-drink]");
       drinkDivs.forEach((drinkDiv, i) => {
         drinkDiv.addEventListener("click", () => {
-          drinkDiv.classList.add("active");
-          console.log("active class added");
+          // if the element is already active remove the active class from it
+          if (drinkDiv.classList.contains("active")) {
+            drinkDiv.classList.remove("active");
+          } // make the element active
+          else drinkDiv.classList.add("active");
           drinkDivs.forEach((divDrink) => {
-            if (divDrink != drinkDiv) divDrink.classList.remove("active");
+            if (divDrink != drinkDiv) {
+              divDrink.classList.remove("active");
+            }
           });
         });
         drinkDiv.innerHTML = drinksNamesHtml[i];
