@@ -84,18 +84,19 @@ div {
   display: inline-block;
   outline: none;
   border: none;
-  background-color: aliceblue;
+  background-color: white;
   height: 30px;
   margin: 0;
   padding: auto 30px;
   font-size: 1.5rem;
   font-weight: 700;
+  border: solid thin black;
 }
 .input input {
   width: 300px;
   font-weight: 400;
   border-radius: 15px 0 0 15px ;
-
+  padding-left: 10px;
 }
 .input .btn {
   border-radius: 0 15px 15px 0;
@@ -150,6 +151,7 @@ footer{
   .drink{
     width: 80vw;
     height: 100%;
+    overflow: auto;
   }
   .active{
     flex: 5;
