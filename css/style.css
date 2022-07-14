@@ -40,10 +40,9 @@ div {
 .container {
   display: flex;
   flex-direction: column;
-  padding: 0 2%;
   align-items: center;
   justify-content: space-evenly;
-  padding: 15px 5px;
+  padding: 15px 0px;
   width: 100%;
 }
 .drink {
@@ -57,6 +56,7 @@ div {
   cursor: pointer;
   position: relative;
   transition: flex var(--trans-delay) ease-in-out;
+  
 }
 .hero {
   display: flex;
@@ -67,6 +67,7 @@ div {
   align-self: stretch;
   width: 100%;
   margin: 30px 10px;
+  padding: 0 5px;
 }
 .active {
   flex: 3;
@@ -94,6 +95,19 @@ div {
 }
 .input .btn:hover {
   background: rgba(169, 199, 225, 0.5);
+}
+.drink-name{
+  display: none;
+}
+.active .drink-name{
+  display: inline-block;
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0px;
+  left: 5%;
+  color: rgb(243, 243, 243);
+  text-decoration: double;
+  text-shadow: 0px 1px 5px black;
 }
 /******************************************
 /* ADDITIONAL STYLES
